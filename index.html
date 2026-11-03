@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0b0d" />
+    <title>DOBÊ — Creative Portfolio</title>
+    <meta name="description" content="DOBÊ: produtor musical, DJ e desenvolvedor de produtos digitais. Press kits, plugins, drum kits e música." />
+    <meta property="og:title" content="DOBÊ — Creative Portfolio" />
+    <meta property="og:description" content="Press kits, plugins, drum kits e música." />
+    <link rel="icon" type="image/png" href="./assets/dobe-logo.png" />
+    <link rel="preload" as="image" href="./assets/dobe-nome.svg" />
+    <style>
+      /* Fundo definido antes de qualquer arquivo: evita o quadro branco na abertura. */
+      html, body { margin: 0; height: 100%; background: #0a0b0d; color-scheme: dark; }
+      /* Em conexão lenta, um traço discreto indica carregamento. Em conexão rápida nunca chega a aparecer. */
+      .boot { position: fixed; top: 50%; left: 50%; width: 96px; height: 1px; margin-left: -48px; overflow: hidden; background: rgba(255, 255, 255, 0.1); opacity: 0; animation: boot-in 0.4s ease 0.7s forwards; }
+      .boot::after { content: ''; display: block; width: 40%; height: 100%; background: rgba(255, 255, 255, 0.65); animation: boot-run 1.3s ease-in-out infinite alternate; }
+      @keyframes boot-in { to { opacity: 1; } }
+      @keyframes boot-run { from { transform: translateX(-100%); } to { transform: translateX(250%); } }
+      @media (prefers-reduced-motion: reduce) { .boot::after { animation: none; width: 100%; } }
+    </style>
+    <script>
+      if (!location.hash || location.hash === '#home') document.documentElement.dataset.intro = 'hold'
+    </script>
+    <script type="module" crossorigin src="./assets/index-BKlNzfOg.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BCJyqjml.css">
+  </head>
+  <body>
+    <div id="root"><div class="boot" aria-hidden="true"></div></div>
+  </body>
+</html>
